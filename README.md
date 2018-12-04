@@ -1,4 +1,6 @@
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Build Status](https://dev.azure.com/kmees/formik-office-ui-fabric-react/_apis/build/status/kmees.formik-office-ui-fabric-react)](https://dev.azure.com/kmees/formik-office-ui-fabric-react/_build/latest?definitionId=1)
+[![Coverage Status](https://coveralls.io/repos/github/kmees/formik-office-ui-fabric-react/badge.svg?branch=master)](https://coveralls.io/github/kmees/formik-office-ui-fabric-react?branch=master)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 
 # formik-office-ui-fabric-react
 
