@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormikDatePicker /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="ms-DatePicker root-47"
+    onBlur={[Function]}
+  >
+    <div
+      aria-expanded={false}
+      aria-haspopup="true"
+      aria-owns="DatePicker-Callout2"
+      role="combobox"
+    >
+      <div
+        className="ms-TextField root-52"
+      >
+        <div
+          className="ms-TextField-wrapper wrapper-53"
+        >
+          <label
+            className="ms-Label root-61"
+            htmlFor="DatePicker1-label"
+            required={false}
+          >
+            Date
+          </label>
+          <div
+            className="ms-TextField-fieldGroup fieldGroup-54"
+          >
+            <input
+              aria-invalid={false}
+              className="ms-TextField-field field-55"
+              id="DatePicker1-label"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              readOnly={true}
+              required={false}
+              type="text"
+              value="Tue Dec 04 2018"
+            />
+            <i
+              aria-hidden={true}
+              className="ms-DatePicker-event--with-label msDatePickerDisabled icon-62"
+              data-icon-name="Calendar"
+              onClick={[Function]}
+              role="presentation"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;
