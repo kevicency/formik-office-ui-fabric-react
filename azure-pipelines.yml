@@ -19,7 +19,6 @@ steps:
   - script: |
       yarn prettier:list
       yarn tslint
-      yarn compile
       yarn test --ci --reporters=jest-junit
       yarn coverage
     displayName: 'lint and test'
@@ -45,6 +44,7 @@ steps:
         dist/**
         docs/**
         package.json
+        CHANGELOG.md
         README.md
         LICENSE
       TargetFolder: '$(Build.ArtifactStagingDirectory)'
