@@ -3,5 +3,8 @@
 exports[`TestComponent renders correctly 1`] = `
 <div>
   test
+  <button>
+    +
+  </button>
 </div>
 `;
