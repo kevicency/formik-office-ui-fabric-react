@@ -26,10 +26,11 @@
     "lint": "tslint --project tsconfig.json",
     "lint:fix": "tslint --project tsconfig.json --fix",
     "package": "yarn build && rollup -c",
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "jest",
     "prettier": "prettier --write \"{src,stories}/**/*.{js,tsx,ts}\"",
-    "prettier:list": "prettier --list-different \"{src,stories}/**/*.{js,tsx,ts}\""
+    "prettier:list": "prettier --list-different \"{src,stories}/**/*.{js,tsx,ts}\"",
+    "start": "yarn storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
