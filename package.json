@@ -30,7 +30,7 @@
     "package": "yarn build && rollup -c",
     "prettier": "prettier --write \"{src,stories}/**/*.{js,tsx,ts}\"",
     "prettier:list": "prettier --list-different \"{src,stories}/**/*.{js,tsx,ts}\"",
-    "release": "yarn standard-version",
+    "release": "yarn standard-version --no-verify",
     "start": "yarn storybook",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest"
@@ -76,6 +76,11 @@
     "hooks": {
       "pre-commit": "yarn prettier && yarn lint:fix",
       "pre-push": "yarn test -u"
+    }
+  },
+  "standard-version": {
+    "scripts": {
+      "prebump": "if [[ \"$(git rev-parse --abbrev-ref HEAD)\" != \"master\" ]]; then exit 1; fi"
     }
   }
 }
