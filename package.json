@@ -30,6 +30,7 @@
     "package": "yarn build && rollup -c",
     "prettier": "prettier --write \"{src,stories}/**/*.{js,tsx,ts}\"",
     "prettier:list": "prettier --list-different \"{src,stories}/**/*.{js,tsx,ts}\"",
+    "release": "yarn standard-version",
     "start": "yarn storybook",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest"
