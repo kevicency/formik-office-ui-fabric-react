@@ -14,15 +14,22 @@
   },
   "license": "MIT",
   "author": "Kevin Mees <kev.mees@gmail.com>",
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "module": "dist/formik-office-ui-fabric-react.es6.js",
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "cross-env NODE_ENV=production tsc --project tsconfig.package.json",
     "compile": "cross-env NODE_ENV=production tsc --project tsconfig.json --noEmit",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --project tsconfig.json --fix",
     "package": "yarn build && rollup -c",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "jest"
+    "test": "jest",
+    "prettier": "prettier --write \"{src,stories}/**/*.{js,tsx,ts}\"",
+    "prettier:list": "prettier --list-different \"{src,stories}/**/*.{js,tsx,ts}\""
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
@@ -35,6 +42,7 @@
     "@types/storybook__addon-actions": "^3.4.1",
     "babel-loader": "^8.0.4",
     "cross-env": "^5.2.0",
+    "husky": "^1.2.0",
     "jest": "^23.6.0",
     "prettier": "^1.15.3",
     "react": "^16.6.3",
@@ -46,6 +54,14 @@
     "ts-jest": "^23.10.5",
     "ts-loader": "^5.3.1",
     "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-react": "^3.6.0",
     "typescript": "^3.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier && yarn lint:fix",
+      "pre-push": "yarn test -u"
+    }
   }
 }
