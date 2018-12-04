@@ -1,6 +1,7 @@
 node_modules
 lib
 dist
+storybook-static
 yarn-error.log
 
 .DS_Store

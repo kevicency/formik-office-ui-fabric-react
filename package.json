@@ -23,6 +23,7 @@
     "prebuild": "rimraf lib",
     "build": "cross-env NODE_ENV=production tsc --project tsconfig.package.json",
     "compile": "cross-env NODE_ENV=production tsc --project tsconfig.json --noEmit",
+    "docs": "build-storybook",
     "lint": "tslint --project tsconfig.json",
     "lint:fix": "tslint --project tsconfig.json --fix",
     "package": "yarn build && rollup -c",
