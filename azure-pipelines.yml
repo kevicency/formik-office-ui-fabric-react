@@ -7,12 +7,45 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '8.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '8.x'
+    displayName: 'Install Node.js'
 
-- script: |
-    yarn install
-    yarn build
-  displayName: 'yarn install and build'
+  - script: |
+      yarn install
+    displayName: 'yarn install'
+
+  - script: |
+      yarn prettier:list
+      yarn tslint
+      yarn compile
+      yarn test --ci --reporters="jest-junit"
+    displayName: 'lint and test'
+
+  - script: |
+      yarn package
+    displayName: 'package'
+
+  - script: |
+      yarn docs
+    displayName: 'docs'
+
+  - task: PublishTestResults@2
+    inputs:
+      testRunner: JUnit
+      testResultsFiles: ./junit.xml
+
+  - task: CopyFiles@2
+    inputs:
+      SourceFolder: '$(System.DefaultWorkingDirectory)'
+      Contents: |
+        lib/**
+        dist/**
+        docs/**
+        package.json
+        README.md
+        LICENSE
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+  - task: PublishBuildArtifacts@1
