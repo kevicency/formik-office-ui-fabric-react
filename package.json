@@ -1,6 +1,6 @@
 {
   "name": "formik-office-ui-fabric-react",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Bindings for using Formik with Office UI Fabric React",
   "keywords": [
     "form",
