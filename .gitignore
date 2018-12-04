@@ -1,9 +1,17 @@
+# packages
 node_modules
+yarn-error.log
+
+# build & test
 lib
 dist
 docs
-yarn-error.log
 junit.xml
-
-.DS_Store
 .rpt2_cache
+
+# secrets
+.coveralls.yml
+
+# os x
+.DS_Store
+

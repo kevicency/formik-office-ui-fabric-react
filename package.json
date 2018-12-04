@@ -32,7 +32,7 @@
     "start": "yarn storybook",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest",
-    "test:ci": "jest --ci --reporters=jest-junit --coverage --coverageReporters=text-lcov | coveralls"
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",

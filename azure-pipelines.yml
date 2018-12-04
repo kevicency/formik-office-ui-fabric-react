@@ -20,7 +20,7 @@ steps:
       yarn prettier:list
       yarn tslint
       yarn compile
-      yarn test:ci
+      yarn test --ci --reporters=jest-junit
     displayName: 'lint and test'
 
   - script: |
