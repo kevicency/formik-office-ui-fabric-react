@@ -21,6 +21,7 @@ steps:
       yarn tslint
       yarn compile
       yarn test --ci --reporters=jest-junit
+      yarn coverage
     displayName: 'lint and test'
 
   - script: |
