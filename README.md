@@ -2,7 +2,7 @@
 
 # formik-office-ui-fabric-react
 
-> Formik ❤️ Office UI Fabric React
+> Formik 💒 Office UI Fabric React
 
 ## Why?
 
