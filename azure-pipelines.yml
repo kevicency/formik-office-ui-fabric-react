@@ -20,8 +20,11 @@ steps:
       yarn prettier:list
       yarn tslint
       yarn test --ci --reporters=jest-junit
-      yarn coverage
     displayName: 'lint and test'
+
+  - script: |
+      yarn coverage
+    displayName: 'coverage'
 
   - script: |
       yarn package
