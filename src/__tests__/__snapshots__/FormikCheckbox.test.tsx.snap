@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormikCheckbox /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <button
+    aria-checked={false}
+    className="ms-Checkbox is-enabled root-47"
+    id="checkbox-1"
+    name="test"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    role="checkbox"
+    type="button"
+  >
+    <label
+      className="ms-Checkbox-label label-48"
+      htmlFor="checkbox-1"
+    >
+      <div
+        className="ms-Checkbox-checkbox checkbox-49"
+      >
+        <i
+          aria-hidden={true}
+          className="ms-Checkbox-checkmark checkmark-52"
+          data-icon-name="CheckMark"
+          role="presentation"
+        />
+      </div>
+      <span
+        className="ms-Checkbox-text text-51"
+      >
+        Date
+      </span>
+    </label>
+  </button>
+</form>
+`;
