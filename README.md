@@ -6,7 +6,7 @@
 
 ## Why?
 
-To reduce the boilerplate code needed to get [Fabrics input components](https://developer.microsoft.com/en-us/fabric#/components) work seamlessly with [Formiks field props](https://jaredpalmer.com/formik/docs/api/field)
+To reduce the boilerplate code needed to get [Fabrics input components](https://developer.microsoft.com/en-us/fabric#/components) work seamlessly with [Formiks field props](https://jaredpalmer.com/formik/docs/api/field) and validation errors.
 
 ## How?
 
@@ -34,6 +34,7 @@ const OldAndUgly = () => (
           <DatePicker
             value={/* wrapper code for fieldProps.value */}
             onSelectDate={/* wrapper code for fieldProps.onChange */}
+            {/* and more ugly wrapper code trying to get name, onBlur, etc. working */}
           />
         )}
       />
@@ -50,7 +51,7 @@ const NewAndPretty = () => (
 )
 ```
 
-For a complete list of support components, see [Storybook](https://kmees.github.io/formik-office-ui-fabric-react)
+For a complete list of supported components, see [Storybook](https://kmees.github.io/formik-office-ui-fabric-react)
 
 ## Development
 
