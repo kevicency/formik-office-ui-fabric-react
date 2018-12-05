@@ -37,7 +37,7 @@ export const FormikDropdownStory = () => (
     initialValues={new Values()}
     onSubmit={handleSubmit}
     validate={validate}>
-    <StoryForm title="Date Picker">
+    <StoryForm title="Dropdown">
       <Field
         name="single"
         render={(fieldProps: FieldProps<Values>) => (

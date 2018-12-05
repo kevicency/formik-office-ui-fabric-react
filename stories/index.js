@@ -9,5 +9,5 @@ initializeIcons()
 
 storiesOf('formik-office-ui-fabric-react', module)
   .add('FormikDatePicker', FormikDatePickerStory)
-  .add('FormikiDropdown', FormikDropdownStory)
-  .add('FormikiTextField', FormikTextFieldStory)
+  .add('FormikDropdown', FormikDropdownStory)
+  .add('FormikTextField', FormikTextFieldStory)
