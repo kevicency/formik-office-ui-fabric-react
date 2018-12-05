@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormikMaskedTextField /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="ms-TextField root-48"
+  >
+    <div
+      className="ms-TextField-wrapper wrapper-49"
+    >
+      <label
+        className="ms-Label root-57"
+        htmlFor="TextField9"
+      >
+        Masked
+      </label>
+      <div
+        className="ms-TextField-fieldGroup fieldGroup-50"
+      >
+        <input
+          aria-invalid={false}
+          className="ms-TextField-field field-51"
+          id="TextField9"
+          name="masked"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          type="text"
+          value="(___) ___ - ____"
+        />
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`<FormikTextField /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="ms-TextField root-48"
+  >
+    <div
+      className="ms-TextField-wrapper wrapper-49"
+    >
+      <label
+        className="ms-Label root-57"
+        htmlFor="TextField1"
+      >
+        Email
+      </label>
+      <div
+        className="ms-TextField-fieldGroup fieldGroup-50"
+      >
+        <input
+          aria-invalid={false}
+          className="ms-TextField-field field-51"
+          id="TextField1"
+          name="email"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          type="text"
+          value="foo@bar.com"
+        />
+      </div>
+    </div>
+  </div>
+</form>
+`;

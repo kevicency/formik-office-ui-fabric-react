@@ -41,7 +41,15 @@ export const StoryForm = connect(
               width: '100%',
               marginTop: '0',
             }}>
-            {JSON.stringify({ values: formik!.values })}
+            {JSON.stringify(
+              {
+                values: formik!.values,
+                dirty: formik!.dirty,
+                touched: formik!.touched,
+              },
+              null,
+              2
+            )}
           </pre>
         </footer>
       </Form>
