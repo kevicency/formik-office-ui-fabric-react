@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormikSlider /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="ms-Slider ms-Slider-enabled ms-Slider-row root-47"
+  >
+    <label
+      className="ms-Label titleLabel-57"
+      htmlFor="Slider1"
+    >
+      Count
+    </label>
+    <div
+      className="ms-Slider-container container-49"
+    >
+      <div
+        aria-disabled={false}
+        aria-label="Count"
+        aria-valuemax={10}
+        aria-valuemin={0}
+        aria-valuenow={0}
+        className="ms-Slider-slideBox ms-Slider-showValue ms-Slider-showTransitions slideBox-50"
+        data-is-focusable={true}
+        id="Slider1"
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+        role="slider"
+        tabIndex={0}
+      >
+        <div
+          className="ms-Slider-line line-52"
+        >
+          <span
+            className="ms-Slider-thumb thumb-51"
+            style={
+              Object {
+                "left": "0%",
+              }
+            }
+          />
+          <span
+            className="lineContainer-53 ms-Slider-active activeSection-54"
+            style={
+              Object {
+                "width": "0%",
+              }
+            }
+          />
+          <span
+            className="lineContainer-53 ms-Slider-inactive inactiveSection-55"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+      <label
+        className="ms-Label ms-Slider-value valueLabel-58"
+      >
+        0
+      </label>
+    </div>
+  </div>
+</form>
+`;
