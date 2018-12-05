@@ -23,7 +23,7 @@ npm install --save formik-office-ui-fabric-react
 ```tsx
 import { Formik, Form, Field } from 'formik'
 import { DatePicker } from 'office-ui-fabric-react'
-import { FormikDatePicker } from 'office-ui-fabric-react'
+import { FormikDatePicker } from 'formik-office-ui-fabric-react'
 
 const OldAndUgly = () => (
   <Formik initialValues={{ date: new Date() }}>
