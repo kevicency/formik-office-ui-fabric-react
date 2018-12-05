@@ -33,7 +33,7 @@ export const FormikTextFieldStory = () => (
     initialValues={new Values()}
     onSubmit={handleSubmit}
     validate={validate}>
-    <StoryForm title="Date Picker">
+    <StoryForm title="Text Field">
       <Field
         name="name"
         label="Name"
