@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormikDropdown /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="ms-Dropdown-container root-47"
+  >
+    <div
+      aria-activedescendant="Dropdown1-option"
+      aria-describedby="Dropdown1-option"
+      aria-expanded="false"
+      className="ms-Dropdown dropdown-49"
+      data-is-focusable={true}
+      id="Dropdown1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      role="listbox"
+      tabIndex={0}
+    >
+      <span
+        aria-atomic={true}
+        aria-label="foo"
+        aria-live="off"
+        aria-posinset={1}
+        aria-selected={true}
+        aria-setsize={3}
+        className="ms-Dropdown-title title-50"
+        id="Dropdown1-option"
+        role="option"
+      >
+        <span>
+          foo
+        </span>
+      </span>
+      <span
+        className="ms-Dropdown-caretDownWrapper caretDownWrapper-51"
+      >
+        <i
+          aria-hidden={true}
+          className="ms-Dropdown-caretDown caretDown-65"
+          data-icon-name="ChevronDown"
+          role="presentation"
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    className="ms-Dropdown-container root-47"
+  >
+    <div
+      aria-activedescendant="Dropdown2-option"
+      aria-describedby="Dropdown2-option"
+      aria-expanded="false"
+      className="ms-Dropdown dropdown-49"
+      data-is-focusable={true}
+      id="Dropdown2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      role="listbox"
+      tabIndex={0}
+    >
+      <span
+        aria-atomic={true}
+        aria-live="off"
+        aria-setsize={3}
+        className="ms-Dropdown-title ms-Dropdown-titleIsPlaceHolder title-66"
+        id="Dropdown2-option"
+        role="option"
+      />
+      <span
+        className="ms-Dropdown-caretDownWrapper caretDownWrapper-51"
+      >
+        <i
+          aria-hidden={true}
+          className="ms-Dropdown-caretDown caretDown-65"
+          data-icon-name="ChevronDown"
+          role="presentation"
+        />
+      </span>
+    </div>
+  </div>
+</form>
+`;
