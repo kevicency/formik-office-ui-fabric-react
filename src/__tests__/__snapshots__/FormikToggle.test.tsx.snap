@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormikToggle /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="ms-Toggle is-enabled root-47"
+  >
+    <label
+      className="ms-Label ms-Toggle-label label-53"
+      htmlFor="Toggle1"
+    >
+      Date
+    </label>
+    <div
+      className="ms-Toggle-innerContainer container-49"
+    >
+      <button
+        aria-checked={false}
+        className="ms-Toggle-background pill-50"
+        data-is-focusable={true}
+        id="Toggle1"
+        name="test"
+        onChange={[Function]}
+        onClick={[Function]}
+        role="switch"
+        type="button"
+      >
+        <div
+          className="ms-Toggle-thumb thumb-51"
+        />
+      </button>
+    </div>
+  </div>
+</form>
+`;
