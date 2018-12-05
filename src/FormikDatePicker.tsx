@@ -6,16 +6,21 @@ import { Omit } from './utils'
 export function mapFieldToDatePicker<T = any>({
   form,
   field,
-}: FieldProps<T>): Pick<IDatePickerProps, 'value' | 'onSelectDate' | 'onBlur'> {
+}: FieldProps<T>): Pick<
+  IDatePickerProps,
+  'value' | 'onSelectDate' | 'onAfterMenuDismiss'
+> {
+  const onBlur = form.handleBlur<string>(field.name)
+
   return {
     value: field.value,
-    onBlur: () => form.handleBlur(field.name),
+    onAfterMenuDismiss: () => onBlur({ target: { name: field.name } }),
     onSelectDate: date => form.setFieldValue(field.name, date),
   }
 }
 export type FormikDatePickerProps<T = any> = Omit<
   IDatePickerProps,
-  'value' | 'onSelectDate' | 'onBlur'
+  'value' | 'onSelectDate' | 'onBlur' | 'onChange'
 > &
   FieldProps<T>
 
@@ -24,5 +29,23 @@ export function FormikDatePicker<T = any>({
   form,
   ...props
 }: FormikDatePickerProps<T>) {
-  return <DatePicker {...props} {...mapFieldToDatePicker({ field, form })} />
+  const { onAfterMenuDismiss, ...fieldProps } = mapFieldToDatePicker({
+    field,
+    form,
+  })
+
+  const blurOnAfterMenuDismiss = props.onAfterMenuDismiss
+    ? () => {
+        props.onAfterMenuDismiss!()
+        onAfterMenuDismiss!()
+      }
+    : onAfterMenuDismiss
+
+  return (
+    <DatePicker
+      {...props}
+      onAfterMenuDismiss={blurOnAfterMenuDismiss}
+      {...fieldProps}
+    />
+  )
 }

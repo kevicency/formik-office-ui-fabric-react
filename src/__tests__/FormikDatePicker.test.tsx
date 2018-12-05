@@ -10,8 +10,8 @@ setIconOptions({
   disableWarnings: true,
 })
 
-const now = new Date()
-function createFieldProps(date = now): FieldProps<{ test: Date }> {
+const testDate = new Date('2018-12-04T12:00:00Z')
+function createFieldProps(date = testDate): FieldProps<{ test: Date }> {
   return {
     field: {
       value: date,
@@ -19,13 +19,13 @@ function createFieldProps(date = now): FieldProps<{ test: Date }> {
       onBlur: jest.fn(),
       name: 'test',
     },
-    form: { setFieldValue: jest.fn(), handleBlur: jest.fn() },
+    form: { setFieldValue: jest.fn(), handleBlur: jest.fn(() => jest.fn()) },
   } as any
 }
 
 test('<FormikDatePicker /> renders correctly as a field component', () => {
   const component = renderer.create(
-    <Formik initialValues={{ test: now }} onSubmit={noop}>
+    <Formik initialValues={{ test: testDate }} onSubmit={noop}>
       <Form>
         <Field name="test" label="Date" component={FormikDatePicker} />
       </Form>
@@ -53,13 +53,11 @@ test('mapFieldToDatePicker() maps FieldProps to IDatePickerProps', () => {
   const props = mapFieldToDatePicker({ form, field })
 
   expect(props.value).toBe(field.value)
-
-  props.onBlur!(null as any)
-
+  // TODO: better tests for that blur mess
   expect(form.handleBlur).toHaveBeenCalledTimes(1)
   expect(form.handleBlur).toHaveBeenCalledWith(field.name)
 
-  const selectedDate = new Date(now.getTime() + 86400 * 1000) // tomorrow
+  const selectedDate = new Date(testDate.getTime() + 86400 * 1000) // tomorrow
   props.onSelectDate!(selectedDate)
 
   expect(form.setFieldValue).toHaveBeenCalledTimes(1)

@@ -7,7 +7,6 @@ exports[`<FormikDatePicker /> renders correctly as a field component 1`] = `
 >
   <div
     className="ms-DatePicker root-47"
-    onBlur={[Function]}
   >
     <div
       aria-expanded={false}
