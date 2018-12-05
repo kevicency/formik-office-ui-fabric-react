@@ -12,7 +12,7 @@ exports[`<FormikToggle /> renders correctly as a field component 1`] = `
       className="ms-Label ms-Toggle-label label-53"
       htmlFor="Toggle1"
     >
-      Date
+      Toggle
     </label>
     <div
       className="ms-Toggle-innerContainer container-49"

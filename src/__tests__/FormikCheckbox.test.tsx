@@ -26,7 +26,7 @@ test('<FormikCheckbox /> renders correctly as a field component', () => {
   const component = renderer.create(
     <Formik initialValues={{ isChecked: true }} onSubmit={noop}>
       <Form>
-        <Field name="test" label="Date" component={FormikCheckbox} />
+        <Field name="test" label="Checkbox" component={FormikCheckbox} />
       </Form>
     </Formik>
   )

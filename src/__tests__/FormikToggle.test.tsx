@@ -26,7 +26,7 @@ test('<FormikToggle /> renders correctly as a field component', () => {
   const component = renderer.create(
     <Formik initialValues={{ isChecked: true }} onSubmit={noop}>
       <Form>
-        <Field name="test" label="Date" component={FormikToggle} />
+        <Field name="test" label="Toggle" component={FormikToggle} />
       </Form>
     </Formik>
   )

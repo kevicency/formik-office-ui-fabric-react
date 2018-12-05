@@ -33,7 +33,7 @@ exports[`<FormikCheckbox /> renders correctly as a field component 1`] = `
       <span
         className="ms-Checkbox-text text-51"
       >
-        Date
+        Checkbox
       </span>
     </label>
   </button>
