@@ -1,5 +1,6 @@
 import { connect, Form, FormikProps } from 'formik'
 import {
+  DefaultButton,
   Fabric,
   FontClassNames,
   PrimaryButton,
@@ -17,7 +18,7 @@ export const StoryForm = connect(
     children: any
     formik?: FormikProps<any>
   }) => (
-    <Fabric style={{ maxWidth: '480px' }}>
+    <Fabric style={{ maxWidth: '480px', padding: '0px 18px' }}>
       <Form>
         {title && <h1 className={FontClassNames.xLarge}>{title}</h1>}
         {children}
@@ -28,6 +29,12 @@ export const StoryForm = connect(
               disabled={formik!.isSubmitting}>
               Submit
             </PrimaryButton>
+            &nbsp; &nbsp;
+            <DefaultButton
+              onClick={formik!.resetForm.bind(formik, null)}
+              disabled={formik!.isSubmitting || !formik!.dirty}>
+              Reset
+            </DefaultButton>
           </div>
           {formik!.isSubmitting ? (
             <ProgressIndicator />
