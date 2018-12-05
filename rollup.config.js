@@ -1,7 +1,7 @@
 import typescript from 'rollup-plugin-typescript2'
 import pkg from './package.json'
 
-const external = ['react']
+const external = ['react', 'office-ui-fabric-react', 'formik']
 
 export default [
   {
