@@ -1,11 +1,11 @@
-import { FieldProps, getIn } from 'formik'
+import { FieldProps } from 'formik'
 import {
   ITextFieldProps,
   MaskedTextField,
   TextField,
 } from 'office-ui-fabric-react'
 import * as React from 'react'
-import { Omit } from './utils'
+import { getErrorMessage, Omit } from './utils'
 
 export function mapFieldToTextField<T = any>({
   form,
@@ -14,12 +14,9 @@ export function mapFieldToTextField<T = any>({
   ITextFieldProps,
   'value' | 'name' | 'onChange' | 'onBlur' | 'errorMessage' | 'form'
 > {
-  const error = getIn(form.errors, field.name)
-  const touched = getIn(form.touched, field.name)
-
   return {
     ...field,
-    errorMessage: touched ? error : undefined,
+    errorMessage: getErrorMessage({ form, field }),
   }
 }
 
