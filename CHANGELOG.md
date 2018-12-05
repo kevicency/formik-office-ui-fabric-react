@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/kmees/formik-office-ui-fabric-react/compare/v0.3.0...v0.4.0) (2018-12-05)
+
+
+### Features
+
+* **FormikCheckbox:** implement FormikCheckbox ([f5d90f4](https://github.com/kmees/formik-office-ui-fabric-react/commit/f5d90f4))
+* **FormikToggle:** implement FormikToggle ([5cc8fa5](https://github.com/kmees/formik-office-ui-fabric-react/commit/5cc8fa5))
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/kmees/formik-office-ui-fabric-react/compare/v0.2.0...v0.3.0) (2018-12-05)
 
