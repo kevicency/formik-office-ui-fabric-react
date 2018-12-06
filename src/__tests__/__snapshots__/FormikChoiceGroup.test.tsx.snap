@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormikChoiceGroup /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="applicationRole-47"
+    role="application"
+  >
+    <div
+      aria-labelledby="ChoiceGroup1-label"
+      className="ms-ChoiceFieldGroup root-48"
+      role="radiogroup"
+    >
+      <label
+        className="ms-Label root-50"
+        id="ChoiceGroup1-label"
+      >
+        Count
+      </label>
+      <div
+        className="ms-ChoiceFieldGroup-flexContainer flexContainer-49"
+      />
+    </div>
+  </div>
+</form>
+`;
