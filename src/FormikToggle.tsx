@@ -5,15 +5,14 @@ import { createFakeEvent, Omit } from './utils'
 
 export function mapFieldToToggle<T = any>({
   form,
-  field: { value, onChange, onBlur, ...field },
+  field,
 }: FieldProps<T>): Pick<IToggleProps, 'checked' | 'onChange'> {
   return {
-    ...field,
     onChange: (_, checked) => {
       form.setFieldValue(field.name, checked)
-      onBlur(createFakeEvent(field))
+      field.onBlur(createFakeEvent(field))
     },
-    checked: value,
+    checked: field.value,
   }
 }
 

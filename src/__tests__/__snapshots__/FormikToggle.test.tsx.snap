@@ -22,7 +22,6 @@ exports[`<FormikToggle /> renders correctly as a field component 1`] = `
         className="ms-Toggle-background pill-50"
         data-is-focusable={true}
         id="Toggle1"
-        name="test"
         onChange={[Function]}
         onClick={[Function]}
         role="switch"
