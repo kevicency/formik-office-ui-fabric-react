@@ -1,14 +1,9 @@
 import { Field, FieldProps, Form, Formik } from 'formik'
-import { setIconOptions, Slider } from 'office-ui-fabric-react'
+import { Slider } from 'office-ui-fabric-react'
 import * as React from 'react'
 import renderer from 'react-test-renderer'
 import { FormikSlider, mapFieldToSlider } from '../FormikSlider'
 import { noop, serialize } from './utils'
-
-// Suppress icon warnings.
-setIconOptions({
-  disableWarnings: true,
-})
 
 function createFieldProps(): FieldProps<{ test: Date }> {
   return {

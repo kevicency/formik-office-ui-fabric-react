@@ -1,5 +1,5 @@
 import { Field, FieldProps, Form, Formik } from 'formik'
-import { setIconOptions, TextField } from 'office-ui-fabric-react'
+import { TextField } from 'office-ui-fabric-react'
 import * as React from 'react'
 import renderer from 'react-test-renderer'
 import {
@@ -8,13 +8,6 @@ import {
   mapFieldToTextField,
 } from '../FormikTextField'
 import { noop, serialize } from './utils'
-
-// jest.mock('formik', { })
-
-// Suppress icon warnings.
-setIconOptions({
-  disableWarnings: true,
-})
 
 interface Values {
   email: string
