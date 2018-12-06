@@ -16,7 +16,7 @@ function createFieldProps(): FieldProps<{ test: Date }> {
       rating: 3,
       onChange: jest.fn(),
       onBlur: jest.fn(),
-      name: 'isChecked',
+      name: 'rating',
     },
     form: { setFieldValue: jest.fn(), handleBlur: jest.fn(() => jest.fn()) },
   } as any
