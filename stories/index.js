@@ -7,6 +7,7 @@ import { FormikTextFieldStory } from './FormikTextField.story'
 import { FormikDropdownStory } from './FormikDropdown.story'
 import { FormikToggleStory } from './FormikToggle.story'
 import { FormikSliderStory } from './FormikSlider.story'
+import { FormikRatingStory } from './FormikRating.story'
 
 initializeIcons()
 
@@ -14,6 +15,7 @@ storiesOf('formik-office-ui-fabric-react', module)
   .add('FormikCheckbox', FormikCheckboxStory)
   .add('FormikDatePicker', FormikDatePickerStory)
   .add('FormikDropdown', FormikDropdownStory)
+  .add('FormikRating', FormikRatingStory)
   .add('FormikSlider', FormikSliderStory)
   .add('FormikTextField', FormikTextFieldStory)
   .add('FormikToggle', FormikToggleStory)
