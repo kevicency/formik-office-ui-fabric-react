@@ -55,6 +55,7 @@
     "office-ui-fabric-react": "^6.110.1",
     "prettier": "^1.15.3",
     "react": "^16.6.3",
+    "react-appinsights": "^2.0.0",
     "react-dom": "^16.6.3",
     "react-test-renderer": "^16.6.3",
     "rimraf": "^2.6.2",
@@ -70,8 +71,8 @@
   },
   "peerDependencies": {
     "formik": ">=1.0.0",
-    "react": "^15.0.0-0 || ^16.0.0-0",
-    "office-ui-fabric-react": ">=6.0.0"
+    "office-ui-fabric-react": ">=6.0.0",
+    "react": "^15.0.0-0 || ^16.0.0-0"
   },
   "husky": {
     "hooks": {
