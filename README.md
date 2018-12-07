@@ -18,12 +18,12 @@ yarn add formik-office-ui-fabric-react
 npm install --save formik-office-ui-fabric-react
 ```
 
-2. Replace `FooComponent` with `FormikFooComponent`, i.e
+2. Replace `FooComponent` with `FormikFooComponent` or use the `mapFieldToFooComponent`, i.e
 
 ```tsx
 import { Formik, Form, Field } from 'formik'
 import { DatePicker } from 'office-ui-fabric-react'
-import { FormikDatePicker } from 'formik-office-ui-fabric-react'
+import { FormikDatePicker, mapFieldToDatePicker } from 'formik-office-ui-fabric-react'
 
 const OldAndUgly = () => (
   <Formik initialValues={{ date: new Date() }}>
@@ -42,10 +42,22 @@ const OldAndUgly = () => (
   </Formik>
 )
 
+// using the component
 const NewAndPretty = () => (
   <Formik initialValues={{ date: new Date() }}>
     <Form>
       <Field name="date" component={FormikDatePicker} />
+    </Form>
+  </Formik>
+)
+
+// or using the map function
+const NewAndAlsoPretty = () => (
+  <Formik initialValues={{ date: new Date() }}>
+    <Form>
+      <Field name="date" render={fieldProps => (
+        <DatePicker {...mapFieldToDatePicker(fieldProps)} />
+      )} />
     </Form>
   </Formik>
 )
