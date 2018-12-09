@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormikCompactPeoplePicker /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="ms-BasePicker"
+    onKeyDown={[Function]}
+  >
+    <div
+      className="ms-FocusZone"
+      data-focuszone-id="FocusZone26"
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDownCapture={[Function]}
+      role="presentation"
+    >
+      <div
+        className="ms-SelectionZone"
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onDoubleClick={[Function]}
+        onFocusCapture={[Function]}
+        onKeyDown={[Function]}
+        onKeyDownCapture={[Function]}
+        onMouseDown={[Function]}
+        onMouseDownCapture={[Function]}
+        role="presentation"
+      >
+        <div
+          className="ms-BasePicker-text pickerText_e7c83bc9"
+        >
+          <span
+            className="pickerItems_e7c83bc9"
+            id="selected-items-id__25"
+            role="list"
+          />
+          <input
+            aria-autocomplete="both"
+            aria-controls=" "
+            aria-describedby="selected-items-id__25"
+            aria-expanded={false}
+            aria-haspopup="true"
+            autoCapitalize="off"
+            autoComplete="off"
+            className="ms-BasePicker-input pickerInput_e7c83bc9"
+            data-lpignore={true}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onCompositionEnd={[Function]}
+            onCompositionStart={[Function]}
+            onFocus={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            role="combobox"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`<FormikListPeoplePicker /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div>
+    <div
+      className="ms-BasePicker"
+      onKeyDown={[Function]}
+    >
+      <div
+        className="ms-BasePicker-text pickerText_e7c83bc9"
+      >
+        <input
+          aria-controls=" "
+          aria-expanded={false}
+          aria-haspopup="true"
+          autoCapitalize="off"
+          autoComplete="off"
+          className="ms-BasePicker-input pickerInput_e7c83bc9"
+          data-lpignore={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          role="combobox"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="ms-SelectionZone"
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onDoubleClick={[Function]}
+      onFocusCapture={[Function]}
+      onKeyDown={[Function]}
+      onKeyDownCapture={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      role="presentation"
+    >
+      <div
+        className="ms-FocusZone ms-BasePicker-selectedItems"
+        data-focuszone-id="FocusZone50"
+        id="selected-items-id__49"
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDownCapture={[Function]}
+        role="presentation"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`<FormikNormalPeoplePicker /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="ms-BasePicker"
+    onKeyDown={[Function]}
+  >
+    <div
+      className="ms-FocusZone"
+      data-focuszone-id="FocusZone2"
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDownCapture={[Function]}
+      role="presentation"
+    >
+      <div
+        className="ms-SelectionZone"
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onDoubleClick={[Function]}
+        onFocusCapture={[Function]}
+        onKeyDown={[Function]}
+        onKeyDownCapture={[Function]}
+        onMouseDown={[Function]}
+        onMouseDownCapture={[Function]}
+        role="presentation"
+      >
+        <div
+          className="ms-BasePicker-text pickerText_e7c83bc9"
+        >
+          <span
+            className="pickerItems_e7c83bc9"
+            id="selected-items-id__1"
+            role="list"
+          />
+          <input
+            aria-autocomplete="both"
+            aria-controls=" "
+            aria-describedby="selected-items-id__1"
+            aria-expanded={false}
+            aria-haspopup="true"
+            autoCapitalize="off"
+            autoComplete="off"
+            className="ms-BasePicker-input pickerInput_e7c83bc9"
+            data-lpignore={true}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onCompositionEnd={[Function]}
+            onCompositionStart={[Function]}
+            onFocus={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            role="combobox"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;
