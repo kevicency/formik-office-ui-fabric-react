@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/kmees/formik-office-ui-fabric-react/compare/v0.6.0...v0.7.0) (2018-12-10)
+
+
+### Features
+
+* **FormikColorPicker:** implement FormikColorPicker ([59e5f9c](https://github.com/kmees/formik-office-ui-fabric-react/commit/59e5f9c))
+
+
+
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/kmees/formik-office-ui-fabric-react/compare/v0.5.1...v0.6.0) (2018-12-09)
 
