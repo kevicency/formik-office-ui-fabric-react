@@ -2,11 +2,11 @@
 
 # formik-office-ui-fabric-react
 
-> Formik 💒 Office UI Fabric React
+> 💉 Instant pain reliever for using Formik with Office UI Fabric React 💉
 
 ## Why?
 
-To reduce the boilerplate code needed to get [Fabrics input components](https://developer.microsoft.com/en-us/fabric#/components) work seamlessly with [Formiks field props](https://jaredpalmer.com/formik/docs/api/field) and validation errors.
+To reduce the boilerplate code needed to get [Fabrics input components](https://developer.microsoft.com/en-us/fabric#/components) work seamlessly with Formiks [field props](https://jaredpalmer.com/formik/docs/api/field) and validation errors.
 
 ## How?
 
@@ -63,7 +63,7 @@ const NewAndAlsoPretty = () => (
 )
 ```
 
-For a complete list of supported components, see [Storybook](https://kmees.github.io/formik-office-ui-fabric-react)
+For a complete list of supported components, see the [Storybook](https://kmees.github.io/formik-office-ui-fabric-react)
 
 ## Development
 
