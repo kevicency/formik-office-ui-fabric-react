@@ -1,5 +1,6 @@
 export * from './FormikCheckbox'
 export * from './FormikChoiceGroup'
+export * from './FormikColorPicker'
 export * from './FormikDatePicker'
 export * from './FormikDropdown'
 export * from './FormikPeoplePicker'

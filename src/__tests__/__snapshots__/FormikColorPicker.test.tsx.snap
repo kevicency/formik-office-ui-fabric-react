@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormikColorPicker /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="ms-ColorPicker root-47"
+  >
+    <div
+      className="ms-ColorPicker-panel panel-48"
+    >
+      <div
+        className="ms-ColorPicker-colorRect root-53"
+        onMouseDown={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#ff0000",
+            "minHeight": 220,
+            "minWidth": 220,
+          }
+        }
+      >
+        <div
+          className="ms-ColorPicker-light light-54"
+        />
+        <div
+          className="ms-ColorPicker-dark dark-55"
+        />
+        <div
+          className="ms-ColorPicker-thumb thumb-56"
+          style={
+            Object {
+              "backgroundColor": "#000000",
+              "left": "0%",
+              "top": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ms-ColorPicker-slider is-hue root-57"
+        onMouseDown={[Function]}
+        style={
+          Object {
+            "background": "linear-gradient(to left,red 0,#f09 10%,#cd00ff 20%,#3200ff 30%,#06f 40%,#00fffd 50%,#0f6 60%,#35ff00 70%,#cdff00 80%,#f90 90%,red 100%)",
+          }
+        }
+      >
+        <div
+          className="ms-ColorPicker-sliderOverlay sliderOverlay-58"
+        />
+        <div
+          className="ms-ColorPicker-thumb is-slider sliderThumb-59"
+          style={
+            Object {
+              "left": "0%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ms-ColorPicker-slider is-alpha root-57"
+        onMouseDown={[Function]}
+        style={
+          Object {
+            "backgroundImage": "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQYV2N89erVfwY0ICYmxoguxjgUFKI7GsTH5m4M3w1ChQC1/Ca8i2n1WgAAAABJRU5ErkJggg==)",
+          }
+        }
+      >
+        <div
+          className="ms-ColorPicker-sliderOverlay sliderOverlay-58"
+          style={
+            Object {
+              "background": "linear-gradient(to right, transparent 0, #000000 100%)",
+            }
+          }
+        />
+        <div
+          className="ms-ColorPicker-thumb is-slider sliderThumb-59"
+          style={
+            Object {
+              "left": "100%",
+            }
+          }
+        />
+      </div>
+      <table
+        cellPadding="0"
+        cellSpacing="0"
+        className="ms-ColorPicker-table table-49"
+      >
+        <thead>
+          <tr
+            className="tableHeader-50"
+          >
+            <td
+              className="tableHexCell-51"
+            >
+              Hex
+            </td>
+            <td>
+              Red
+            </td>
+            <td>
+              Green
+            </td>
+            <td>
+              Blue
+            </td>
+            <td>
+              Alpha
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div
+                className="ms-TextField ms-ColorPicker-input input-61"
+              >
+                <div
+                  className="ms-TextField-wrapper wrapper-62"
+                >
+                  <div
+                    className="ms-TextField-fieldGroup fieldGroup-63"
+                  >
+                    <input
+                      aria-invalid={false}
+                      aria-label="Hex"
+                      className="ms-TextField-field field-64"
+                      id="TextField1"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onInput={[Function]}
+                      spellCheck={false}
+                      type="text"
+                      value="000000"
+                    />
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              style={
+                Object {
+                  "width": "18%",
+                }
+              }
+            >
+              <div
+                className="ms-TextField ms-ColorPicker-input input-61"
+              >
+                <div
+                  className="ms-TextField-wrapper wrapper-62"
+                >
+                  <div
+                    className="ms-TextField-fieldGroup fieldGroup-63"
+                  >
+                    <input
+                      aria-invalid={false}
+                      aria-label="Red"
+                      className="ms-TextField-field field-64"
+                      id="TextField3"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onInput={[Function]}
+                      spellCheck={false}
+                      type="text"
+                      value="0"
+                    />
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              style={
+                Object {
+                  "width": "18%",
+                }
+              }
+            >
+              <div
+                className="ms-TextField ms-ColorPicker-input input-61"
+              >
+                <div
+                  className="ms-TextField-wrapper wrapper-62"
+                >
+                  <div
+                    className="ms-TextField-fieldGroup fieldGroup-63"
+                  >
+                    <input
+                      aria-invalid={false}
+                      aria-label="Green"
+                      className="ms-TextField-field field-64"
+                      id="TextField5"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onInput={[Function]}
+                      spellCheck={false}
+                      type="text"
+                      value="0"
+                    />
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              style={
+                Object {
+                  "width": "18%",
+                }
+              }
+            >
+              <div
+                className="ms-TextField ms-ColorPicker-input input-61"
+              >
+                <div
+                  className="ms-TextField-wrapper wrapper-62"
+                >
+                  <div
+                    className="ms-TextField-fieldGroup fieldGroup-63"
+                  >
+                    <input
+                      aria-invalid={false}
+                      aria-label="Blue"
+                      className="ms-TextField-field field-64"
+                      id="TextField7"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onInput={[Function]}
+                      spellCheck={false}
+                      type="text"
+                      value="0"
+                    />
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              style={
+                Object {
+                  "width": "18%",
+                }
+              }
+            >
+              <div
+                className="ms-TextField ms-ColorPicker-input input-61"
+              >
+                <div
+                  className="ms-TextField-wrapper wrapper-62"
+                >
+                  <div
+                    className="ms-TextField-fieldGroup fieldGroup-63"
+                  >
+                    <input
+                      aria-invalid={false}
+                      aria-label="Alpha"
+                      className="ms-TextField-field field-64"
+                      id="TextField9"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onInput={[Function]}
+                      spellCheck={false}
+                      type="text"
+                      value="100"
+                    />
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</form>
+`;
