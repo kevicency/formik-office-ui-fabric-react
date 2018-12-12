@@ -8,6 +8,7 @@ import { FormikDropdownStory } from './FormikDropdown.story'
 import { FormikPeoplePickerStory } from './FormikPeoplePicker.story'
 import { FormikRatingStory } from './FormikRating.story'
 import { FormikSliderStory } from './FormikSlider.story'
+import { FormikSwatchColorPickerStory } from './FormikSwatchColorPicker.story'
 import { FormikTextFieldStory } from './FormikTextField.story'
 import { FormikToggleStory } from './FormikToggle.story'
 
@@ -22,5 +23,6 @@ storiesOf('formik-office-ui-fabric-react', module)
   .add('FormikPeoplePicker', FormikPeoplePickerStory)
   .add('FormikRating', FormikRatingStory)
   .add('FormikSlider', FormikSliderStory)
+  .add('FormikSwatchColorPicker', FormikSwatchColorPickerStory)
   .add('FormikTextField', FormikTextFieldStory)
   .add('FormikToggle', FormikToggleStory)

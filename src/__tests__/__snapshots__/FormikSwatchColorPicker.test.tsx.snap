@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormikSwatchColorPicker /> renders correctly as a field component 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="ms-FocusZone ms-swatchColorPickerBodyContainer focusedContainer-49"
+    data-focuszone-id="FocusZone3"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseDownCapture={[Function]}
+    role="presentation"
+  >
+    <table
+      className="root-50"
+      id="id__2"
+      onBlur={[Function]}
+      role="grid"
+    >
+      <tbody>
+        <tr
+          role="row"
+        >
+          <td
+            className="tableCell-48"
+            role="presentation"
+          >
+            <button
+              aria-label="red"
+              aria-selected={false}
+              className="ms-Button ms-Button--action ms-Button--command colorCell-53"
+              data-index={0}
+              data-is-focusable={true}
+              id="swatchColorPicker1-#ff0000-0"
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseMove={[Function]}
+              onMouseUp={[Function]}
+              role="gridcell"
+              title="red"
+              type="button"
+            >
+              <div
+                className="ms-Button-flexContainer flexContainer-54"
+              >
+                <svg
+                  className="svg-52"
+                  fill="#ff0000"
+                  viewBox="0 0 20 20"
+                >
+                  <circle
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                  />
+                </svg>
+              </div>
+            </button>
+          </td>
+          <td
+            className="tableCell-48"
+            role="presentation"
+          >
+            <button
+              aria-label="green"
+              aria-selected={false}
+              className="ms-Button ms-Button--action ms-Button--command colorCell-53"
+              data-index={1}
+              data-is-focusable={true}
+              id="swatchColorPicker1-#00ff00-1"
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseMove={[Function]}
+              onMouseUp={[Function]}
+              role="gridcell"
+              title="green"
+              type="button"
+            >
+              <div
+                className="ms-Button-flexContainer flexContainer-54"
+              >
+                <svg
+                  className="svg-52"
+                  fill="#00ff00"
+                  viewBox="0 0 20 20"
+                >
+                  <circle
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                  />
+                </svg>
+              </div>
+            </button>
+          </td>
+          <td
+            className="tableCell-48"
+            role="presentation"
+          >
+            <button
+              aria-label="blue"
+              aria-selected={false}
+              className="ms-Button ms-Button--action ms-Button--command colorCell-53"
+              data-index={2}
+              data-is-focusable={true}
+              id="swatchColorPicker1-#0000ff-2"
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseMove={[Function]}
+              onMouseUp={[Function]}
+              role="gridcell"
+              title="blue"
+              type="button"
+            >
+              <div
+                className="ms-Button-flexContainer flexContainer-54"
+              >
+                <svg
+                  className="svg-52"
+                  fill="#0000ff"
+                  viewBox="0 0 20 20"
+                >
+                  <circle
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                  />
+                </svg>
+              </div>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>
+`;
