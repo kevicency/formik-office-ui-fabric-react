@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0"></a>
+# [0.8.0](https://github.com/kmees/formik-office-ui-fabric-react/compare/v0.7.0...v0.8.0) (2018-12-12)
+
+
+### Bug Fixes
+
+* **FormikDatePicker:** use field.onBlur instead of creating a new blur handler ([fe57b6c](https://github.com/kmees/formik-office-ui-fabric-react/commit/fe57b6c))
+* **FormikDropdown:** use field.onBlur instead of creating a new blur handler ([9835283](https://github.com/kmees/formik-office-ui-fabric-react/commit/9835283))
+
+
+### Features
+
+* **FormikSpinButton:** implement FormikSpinButton ([8799395](https://github.com/kmees/formik-office-ui-fabric-react/commit/8799395))
+* **FormikSwatchColorPicker:** implement FormikSwatchColorPicker ([c5a7c0a](https://github.com/kmees/formik-office-ui-fabric-react/commit/c5a7c0a))
+
+
+
 <a name="0.7.0"></a>
 # [0.7.0](https://github.com/kmees/formik-office-ui-fabric-react/compare/v0.6.0...v0.7.0) (2018-12-10)
 
