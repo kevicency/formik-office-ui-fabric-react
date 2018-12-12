@@ -63,7 +63,10 @@ const NewAndAlsoPretty = () => (
 )
 ```
 
-For a complete list of supported components, see the [Storybook](https://kmees.github.io/formik-office-ui-fabric-react)
+## Documentation
+
+- For a complete list of all supported components, see the [Storybook](https://kmees.github.io/formik-office-ui-fabric-react)
+- Try it out: [Code Sandbox](https://codesandbox.io/s/oo7q88p06)
 
 ## Development
 
