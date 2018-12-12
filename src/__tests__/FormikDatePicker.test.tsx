@@ -53,9 +53,6 @@ test('mapFieldToDatePicker() maps FieldProps to IDatePickerProps', () => {
   const props = mapFieldToDatePicker({ form, field })
 
   expect(props.value).toBe(field.value)
-  // TODO: better tests for that blur mess
-  expect(form.handleBlur).toHaveBeenCalledTimes(1)
-  expect(form.handleBlur).toHaveBeenCalledWith(field.name)
 
   const selectedDate = new Date(testDate.getTime() + 86400 * 1000) // tomorrow
   props.onSelectDate!(selectedDate)

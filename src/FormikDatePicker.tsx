@@ -10,11 +10,9 @@ export function mapFieldToDatePicker<T = any>({
   IDatePickerProps,
   'value' | 'onSelectDate' | 'onAfterMenuDismiss'
 > {
-  const onBlur = form.handleBlur<string>(field.name)
-
   return {
     value: field.value,
-    onAfterMenuDismiss: () => onBlur(createFakeEvent(field)),
+    onAfterMenuDismiss: () => field.onBlur(createFakeEvent(field)),
     onSelectDate: date => form.setFieldValue(field.name, date),
   }
 }
