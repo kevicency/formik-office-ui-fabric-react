@@ -11,10 +11,9 @@ export function mapFieldToDropdown<T = any>({
   'selectedKey' | 'selectedKeys' | 'onDismiss' | 'onChange' | 'errorMessage'
 > {
   const multiSelect = Array.isArray(field.value)
-  const onBlur = form.handleBlur<string>(field.name)
   const shared = {
     errorMessage: getErrorMessage({ field, form }),
-    onDismiss: () => onBlur(createFakeEvent(field)),
+    onDismiss: () => field.onBlur(createFakeEvent(field)),
   }
 
   return multiSelect
