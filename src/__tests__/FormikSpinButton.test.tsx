@@ -1,19 +1,26 @@
 import { Field, FieldProps, Form, Formik } from 'formik'
-import { SpinButton } from 'office-ui-fabric-react'
+import { setIconOptions, SpinButton } from 'office-ui-fabric-react'
 import * as React from 'react'
 import renderer from 'react-test-renderer'
 import { FormikSpinButton, mapFieldToSpinButton } from '../FormikSpinButton'
 import { noop, serialize } from './utils'
 
-function createFieldProps(
-  value: number | string = 5
-): FieldProps<{ test: number | string }> {
+// Suppress icon warnings.
+setIconOptions({
+  disableWarnings: true,
+})
+
+class Values {
+  public rating: number | string = 3
+}
+
+function createFieldProps(value: number | string = 3): FieldProps<Values> {
   return {
     field: {
       value,
       onChange: jest.fn(),
       onBlur: jest.fn(),
-      name: 'test',
+      name: 'rating',
     },
     form: { setFieldValue: jest.fn(), handleBlur: jest.fn(() => jest.fn()) },
   } as any
@@ -21,9 +28,9 @@ function createFieldProps(
 
 test('<FormikSpinButton /> renders correctly as a field component', () => {
   const component = renderer.create(
-    <Formik initialValues={{ isChecked: true }} onSubmit={noop}>
+    <Formik initialValues={new Values()} onSubmit={noop}>
       <Form>
-        <Field name="test" label="Count" component={FormikSpinButton} />
+        <Field name="rating" label="Rating" component={FormikSpinButton} />
       </Form>
     </Formik>
   )

@@ -18,7 +18,7 @@ exports[`<FormikChoiceGroup /> renders correctly as a field component 1`] = `
         className="ms-Label root-50"
         id="ChoiceGroup1-label"
       >
-        Count
+        Selection
       </label>
       <div
         className="ms-ChoiceFieldGroup-flexContainer flexContainer-49"

@@ -11,13 +11,18 @@ setIconOptions({
 })
 
 const testDate = new Date('2018-12-04T12:00:00Z')
-function createFieldProps(date = testDate): FieldProps<{ test: Date }> {
+
+class Values {
+  public date: Date = testDate
+}
+
+function createFieldProps(value = testDate): FieldProps<Values> {
   return {
     field: {
-      value: date,
+      value,
       onChange: jest.fn(),
       onBlur: jest.fn(),
-      name: 'test',
+      name: 'date',
     },
     form: { setFieldValue: jest.fn(), handleBlur: jest.fn(() => jest.fn()) },
   } as any
@@ -27,7 +32,7 @@ test('<FormikDatePicker /> renders correctly as a field component', () => {
   const component = renderer.create(
     <Formik initialValues={{ test: testDate }} onSubmit={noop}>
       <Form>
-        <Field name="test" label="Date" component={FormikDatePicker} />
+        <Field name="date" label="Date" component={FormikDatePicker} />
       </Form>
     </Formik>
   )
@@ -36,14 +41,13 @@ test('<FormikDatePicker /> renders correctly as a field component', () => {
 })
 
 test('<FormikDatePicker /> renders a Fabric <DatePicker />', () => {
-  const label = 'Date'
   const fieldProps = createFieldProps()
 
   const formikDatePicker = renderer.create(
-    <FormikDatePicker {...fieldProps} label={label} />
+    <FormikDatePicker {...fieldProps} label="Date" />
   )
   const fabricDatePicker = renderer.create(
-    <DatePicker {...mapFieldToDatePicker(fieldProps)} label={label} />
+    <DatePicker {...mapFieldToDatePicker(fieldProps)} label="Date" />
   )
   expect(serialize(formikDatePicker)).toBe(serialize(fabricDatePicker))
 })

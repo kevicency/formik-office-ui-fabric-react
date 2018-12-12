@@ -6,10 +6,11 @@ exports[`<FormikCheckbox /> renders correctly as a field component 1`] = `
   onSubmit={[Function]}
 >
   <button
-    aria-checked={false}
-    className="ms-Checkbox is-enabled root-47"
+    aria-checked={true}
+    checked={true}
+    className="ms-Checkbox is-checked is-enabled root-47"
     id="checkbox-1"
-    name="test"
+    name="isChecked"
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}

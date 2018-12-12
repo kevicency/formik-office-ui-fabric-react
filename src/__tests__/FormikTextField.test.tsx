@@ -9,16 +9,17 @@ import {
 } from '../FormikTextField'
 import { noop, serialize } from './utils'
 
-interface Values {
-  email: string
+class Values {
+  public email: string = 'foo@bar.com'
 }
 
 function createFieldProps(
+  value: string = 'foo@bar.com',
   errorMessage?: string | undefined
 ): FieldProps<Values> {
   return {
     field: {
-      value: 'foo',
+      value,
       onChange: jest.fn(),
       onBlur: jest.fn(),
       name: 'email',
@@ -38,7 +39,7 @@ function createFieldProps(
 
 test('<FormikTextField /> renders correctly as a field component', () => {
   const component = renderer.create(
-    <Formik initialValues={{ email: 'foo@bar.com' }} onSubmit={noop}>
+    <Formik initialValues={new Values()} onSubmit={noop}>
       <Form>
         <Field name="email" label="Email" component={FormikTextField} />
       </Form>
@@ -49,14 +50,13 @@ test('<FormikTextField /> renders correctly as a field component', () => {
 })
 
 test('<FormikTextField /> renders a Fabric <TextField />', () => {
-  const label = 'Date'
   const fieldProps = createFieldProps()
 
   const formikTextField = renderer.create(
-    <FormikTextField {...fieldProps} label={label} />
+    <FormikTextField {...fieldProps} label="Email" />
   )
   const fabricTextField = renderer.create(
-    <TextField {...mapFieldToTextField(fieldProps)} label={label} />
+    <TextField {...mapFieldToTextField(fieldProps)} label="Email" />
   )
   expect(serialize(formikTextField)).toBe(serialize(fabricTextField))
 })
@@ -79,7 +79,7 @@ test('mapFieldToTextField() maps FieldProps to ITextFieldProps', () => {
 
 test('mapFieldToTextField() additionally maps error message only when touched', () => {
   const errorMessage = 'not a valid email'
-  const { field, form } = createFieldProps(errorMessage)
+  const { field, form } = createFieldProps(new Values().email, errorMessage)
 
   const props = mapFieldToTextField({
     form: {
@@ -101,7 +101,7 @@ test('mapFieldToTextField() additionally maps error message only when touched', 
 
 test('allow errorMessage prop overwrite', () => {
   const errorMessage = 'not a valid email'
-  const { field, form } = createFieldProps(errorMessage)
+  const { field, form } = createFieldProps(new Values().email, errorMessage)
 
   const formikTextField = renderer.create(
     <FormikTextField {...{ field, form }} errorMessage={'overwrite'} />

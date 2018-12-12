@@ -5,13 +5,17 @@ import renderer from 'react-test-renderer'
 import { FormikChoiceGroup, mapFieldToChoiceGroup } from '../FormikChoiceGroup'
 import { noop, serialize } from './utils'
 
-function createFieldProps(): FieldProps<{ test: Date }> {
+class Values {
+  public selection: string | null = null
+}
+
+function createFieldProps(value: string | null = null): FieldProps<Values> {
   return {
     field: {
-      rating: 'foo',
+      value,
       onChange: jest.fn(),
       onBlur: jest.fn(),
-      name: 'winner',
+      name: 'selection',
     },
     form: { setFieldValue: jest.fn(), handleBlur: jest.fn(() => jest.fn()) },
   } as any
@@ -21,9 +25,13 @@ const options = ['foo', 'bar', 'baz'].map(x => ({ key: x, text: x }))
 
 test('<FormikChoiceGroup /> renders correctly as a field component', () => {
   const component = renderer.create(
-    <Formik initialValues={{ isChecked: true }} onSubmit={noop}>
+    <Formik initialValues={new Values()} onSubmit={noop}>
       <Form>
-        <Field name="test" label="Count" component={FormikChoiceGroup} />
+        <Field
+          name="selection"
+          label="Selection"
+          component={FormikChoiceGroup}
+        />
       </Form>
     </Formik>
   )
@@ -32,16 +40,15 @@ test('<FormikChoiceGroup /> renders correctly as a field component', () => {
 })
 
 test('<FormikChoiceGroup /> renders a Fabric <ChoiceGroup />', () => {
-  const label = 'ChoiceGroup'
   const fieldProps = createFieldProps()
 
   const formikChoiceGroup = renderer.create(
-    <FormikChoiceGroup {...fieldProps} options={options} />
+    <FormikChoiceGroup {...fieldProps} options={options} label="Selection" />
   )
   const fabricChoiceGroup = renderer.create(
     <ChoiceGroup
       {...mapFieldToChoiceGroup(fieldProps)}
-      label={label}
+      label="Selection"
       options={options}
     />
   )

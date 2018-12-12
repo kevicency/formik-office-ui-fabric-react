@@ -30,13 +30,20 @@ const personas = [
 ]
 const handleResolveSuggestions = (filter: string): IPersonaProps[] =>
   personas.filter(x => x.text !== filter && x.secondaryText !== filter)
-function createFieldProps(): FieldProps<{ people: IPersonaProps[] }> {
+
+class Values {
+  public people: IPersonaProps[] = [personas[0]]
+}
+
+function createFieldProps(
+  value: IPersonaProps[] = [personas[0]]
+): FieldProps<Values> {
   return {
     field: {
-      value: [personas[0]],
+      value,
       onChange: jest.fn(),
       onBlur: jest.fn(),
-      name: 'isChecked',
+      name: 'people',
     },
     form: { setFieldValue: jest.fn(), handleBlur: jest.fn(() => jest.fn()) },
   } as any
@@ -51,10 +58,10 @@ function createFieldProps(): FieldProps<{ people: IPersonaProps[] }> {
     FormikPeoplePicker.name
   } /> renders correctly as a field component`, () => {
     const component = renderer.create(
-      <Formik initialValues={{ isChecked: true }} onSubmit={noop}>
+      <Formik initialValues={new Values()} onSubmit={noop}>
         <Form>
           <Field
-            name="test"
+            name="people"
             render={(fieldProps: FieldProps<any>) => (
               <FormikPeoplePicker
                 {...fieldProps}

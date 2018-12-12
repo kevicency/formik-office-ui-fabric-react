@@ -10,10 +10,14 @@ setIconOptions({
   disableWarnings: true,
 })
 
-function createFieldProps(): FieldProps<{ test: Date }> {
+class Values {
+  public rating: number = 3
+}
+
+function createFieldProps(value: number = 3): FieldProps<Values> {
   return {
     field: {
-      rating: 3,
+      value,
       onChange: jest.fn(),
       onBlur: jest.fn(),
       name: 'rating',
@@ -24,9 +28,9 @@ function createFieldProps(): FieldProps<{ test: Date }> {
 
 test('<FormikRating /> renders correctly as a field component', () => {
   const component = renderer.create(
-    <Formik initialValues={{ isChecked: true }} onSubmit={noop}>
+    <Formik initialValues={new Values()} onSubmit={noop}>
       <Form>
-        <Field name="test" label="Count" component={FormikRating} />
+        <Field name="rating" label="Rating" component={FormikRating} />
       </Form>
     </Formik>
   )

@@ -10,10 +10,14 @@ setIconOptions({
   disableWarnings: true,
 })
 
-function createFieldProps(): FieldProps<{ test: Date }> {
+class Values {
+  public isChecked: boolean = false
+}
+
+function createFieldProps(value: boolean = false): FieldProps<Values> {
   return {
     field: {
-      value: false,
+      value,
       onChange: jest.fn(),
       onBlur: jest.fn(),
       name: 'isChecked',
@@ -26,7 +30,7 @@ test('<FormikCheckbox /> renders correctly as a field component', () => {
   const component = renderer.create(
     <Formik initialValues={{ isChecked: true }} onSubmit={noop}>
       <Form>
-        <Field name="test" label="Checkbox" component={FormikCheckbox} />
+        <Field name="isChecked" label="Checkbox" component={FormikCheckbox} />
       </Form>
     </Formik>
   )
@@ -35,12 +39,13 @@ test('<FormikCheckbox /> renders correctly as a field component', () => {
 })
 
 test('<FormikCheckbox /> renders a Fabric <Checkbox />', () => {
-  const label = 'Date'
   const fieldProps = createFieldProps()
 
-  const formikCheckbox = renderer.create(<FormikCheckbox {...fieldProps} />)
+  const formikCheckbox = renderer.create(
+    <FormikCheckbox {...fieldProps} label="Checkbox" />
+  )
   const fabricCheckbox = renderer.create(
-    <Checkbox {...mapFieldToCheckbox(fieldProps)} label={label} />
+    <Checkbox {...mapFieldToCheckbox(fieldProps)} label="Checkbox" />
   )
   expect(serialize(formikCheckbox)).toBe(serialize(fabricCheckbox))
 })

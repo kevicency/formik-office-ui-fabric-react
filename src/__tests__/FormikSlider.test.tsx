@@ -5,13 +5,17 @@ import renderer from 'react-test-renderer'
 import { FormikSlider, mapFieldToSlider } from '../FormikSlider'
 import { noop, serialize } from './utils'
 
-function createFieldProps(): FieldProps<{ test: Date }> {
+class Values {
+  public rating: number = 3
+}
+
+function createFieldProps(value: number = 3): FieldProps<{ test: Date }> {
   return {
     field: {
-      value: 5,
+      value,
       onChange: jest.fn(),
       onBlur: jest.fn(),
-      name: 'isChecked',
+      name: 'rating',
     },
     form: { setFieldValue: jest.fn(), handleBlur: jest.fn(() => jest.fn()) },
   } as any
@@ -19,9 +23,9 @@ function createFieldProps(): FieldProps<{ test: Date }> {
 
 test('<FormikSlider /> renders correctly as a field component', () => {
   const component = renderer.create(
-    <Formik initialValues={{ isChecked: true }} onSubmit={noop}>
+    <Formik initialValues={new Values()} onSubmit={noop}>
       <Form>
-        <Field name="test" label="Count" component={FormikSlider} />
+        <Field name="rating" label="Rating" component={FormikSlider} />
       </Form>
     </Formik>
   )
@@ -30,12 +34,13 @@ test('<FormikSlider /> renders correctly as a field component', () => {
 })
 
 test('<FormikSlider /> renders a Fabric <Slider />', () => {
-  const label = 'Count'
   const fieldProps = createFieldProps()
 
-  const formikSlider = renderer.create(<FormikSlider {...fieldProps} />)
+  const formikSlider = renderer.create(
+    <FormikSlider {...fieldProps} label="Rating" />
+  )
   const fabricSlider = renderer.create(
-    <Slider {...mapFieldToSlider(fieldProps)} label={label} />
+    <Slider {...mapFieldToSlider(fieldProps)} label="Rating" />
   )
   expect(serialize(formikSlider)).toBe(serialize(fabricSlider))
 })

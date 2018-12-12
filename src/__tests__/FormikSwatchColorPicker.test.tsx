@@ -15,12 +15,16 @@ const colors = [
   { id: 'green', label: 'green', color: '#00ff00' },
   { id: 'blue', label: 'blue', color: '#0000ff' },
 ]
+
+class Values {
+  public color: IColorCellProps | string = colors[0]
+}
 function createFieldProps(
-  color: IColorCellProps | string = colors[0]
-): FieldProps<{ color: IColorCellProps }> {
+  value: IColorCellProps | string = colors[0]
+): FieldProps<Values> {
   return {
     field: {
-      value: color,
+      value,
       onChange: jest.fn(),
       onBlur: jest.fn(),
       name: 'color',
@@ -31,11 +35,11 @@ function createFieldProps(
 
 test('<FormikSwatchColorPicker /> renders correctly as a field component', () => {
   const component = renderer.create(
-    <Formik initialValues={{ color: colors[0] }} onSubmit={noop}>
+    <Formik initialValues={new Values()} onSubmit={noop}>
       <Form>
         <Field
           name="color"
-          render={(fieldProps: FieldProps<{ color: IColorCellProps }>) => (
+          render={(fieldProps: FieldProps<Values>) => (
             <FormikSwatchColorPicker
               {...fieldProps}
               columnCount={3}

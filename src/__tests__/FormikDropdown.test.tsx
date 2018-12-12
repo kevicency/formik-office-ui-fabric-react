@@ -12,9 +12,12 @@ setIconOptions({
   disableWarnings: true,
 })
 
-function createFieldProps(
-  value: string | string[]
-): FieldProps<{ test: Date }> {
+class Values {
+  public single: null | string = 'foo'
+  public multi: null | string[] = ['bar', 'baz']
+}
+
+function createFieldProps(value: null | string | string[]): FieldProps<Values> {
   return {
     field: {
       value,
@@ -30,9 +33,7 @@ const options = ['foo', 'bar', 'baz'].map(x => ({ key: x, text: x }))
 
 test('<FormikDropdown /> renders correctly as a field component', () => {
   const component = renderer.create(
-    <Formik
-      initialValues={{ single: 'foo', multi: ['bar', 'baz'] }}
-      onSubmit={noop}>
+    <Formik initialValues={new Values()} onSubmit={noop}>
       <Form>
         <Field
           name="single"

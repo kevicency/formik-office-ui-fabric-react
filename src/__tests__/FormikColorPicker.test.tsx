@@ -5,10 +5,14 @@ import renderer from 'react-test-renderer'
 import { FormikColorPicker, mapFieldToColorPicker } from '../FormikColorPicker'
 import { noop, serialize } from './utils'
 
-function createFieldProps(): FieldProps<{ test: Date }> {
+class Values {
+  public color: string = '#000000'
+}
+
+function createFieldProps(value: string = '#000000'): FieldProps<Values> {
   return {
     field: {
-      value: '#000000',
+      value,
       onChange: jest.fn(),
       onBlur: jest.fn(),
       name: 'color',
@@ -19,7 +23,7 @@ function createFieldProps(): FieldProps<{ test: Date }> {
 
 test('<FormikColorPicker /> renders correctly as a field component', () => {
   const component = renderer.create(
-    <Formik initialValues={{ color: '#000000' }} onSubmit={noop}>
+    <Formik initialValues={new Values()} onSubmit={noop}>
       <Form>
         <Field name="color" component={FormikColorPicker} />
       </Form>

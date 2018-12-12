@@ -12,17 +12,17 @@ exports[`<FormikSlider /> renders correctly as a field component 1`] = `
       className="ms-Label titleLabel-57"
       htmlFor="Slider1"
     >
-      Count
+      Rating
     </label>
     <div
       className="ms-Slider-container container-49"
     >
       <div
         aria-disabled={false}
-        aria-label="Count"
+        aria-label="Rating"
         aria-valuemax={10}
         aria-valuemin={0}
-        aria-valuenow={0}
+        aria-valuenow={3}
         className="ms-Slider-slideBox ms-Slider-showValue ms-Slider-showTransitions slideBox-50"
         data-is-focusable={true}
         id="Slider1"
@@ -39,7 +39,7 @@ exports[`<FormikSlider /> renders correctly as a field component 1`] = `
             className="ms-Slider-thumb thumb-51"
             style={
               Object {
-                "left": "0%",
+                "left": "30%",
               }
             }
           />
@@ -47,7 +47,7 @@ exports[`<FormikSlider /> renders correctly as a field component 1`] = `
             className="lineContainer-53 ms-Slider-active activeSection-54"
             style={
               Object {
-                "width": "0%",
+                "width": "30%",
               }
             }
           />
@@ -55,7 +55,7 @@ exports[`<FormikSlider /> renders correctly as a field component 1`] = `
             className="lineContainer-53 ms-Slider-inactive inactiveSection-55"
             style={
               Object {
-                "width": "100%",
+                "width": "70%",
               }
             }
           />
@@ -64,7 +64,7 @@ exports[`<FormikSlider /> renders correctly as a field component 1`] = `
       <label
         className="ms-Label ms-Slider-value valueLabel-58"
       >
-        0
+        3
       </label>
     </div>
   </div>

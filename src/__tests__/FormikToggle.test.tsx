@@ -5,10 +5,13 @@ import renderer from 'react-test-renderer'
 import { FormikToggle, mapFieldToToggle } from '../FormikToggle'
 import { noop, serialize } from './utils'
 
-function createFieldProps(): FieldProps<{ test: Date }> {
+class Values {
+  public isChecked: boolean = false
+}
+function createFieldProps(value: boolean = false): FieldProps<Values> {
   return {
     field: {
-      value: false,
+      value,
       onChange: jest.fn(),
       onBlur: jest.fn(),
       name: 'isChecked',
@@ -19,9 +22,9 @@ function createFieldProps(): FieldProps<{ test: Date }> {
 
 test('<FormikToggle /> renders correctly as a field component', () => {
   const component = renderer.create(
-    <Formik initialValues={{ isChecked: true }} onSubmit={noop}>
+    <Formik initialValues={new Values()} onSubmit={noop}>
       <Form>
-        <Field name="test" label="Toggle" component={FormikToggle} />
+        <Field name="isChecked" label="IsChecked" component={FormikToggle} />
       </Form>
     </Formik>
   )

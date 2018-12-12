@@ -43,7 +43,7 @@ exports[`<FormikDatePicker /> renders correctly as a field component 1`] = `
               readOnly={true}
               required={false}
               type="text"
-              value="Tue Dec 04 2018"
+              value=""
             />
             <i
               aria-hidden={true}
